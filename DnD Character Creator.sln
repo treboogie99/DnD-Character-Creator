@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		DnD Character Creator\Stats.cs = DnD Character Creator\Stats.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{CACB187B-C26A-491D-9A96-C044B4740D92}"
+	ProjectSection(SolutionItems) = preProject
+		Class1.cs = Class1.cs
+		Sample = Sample
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CACB187B-C26A-491D-9A96-C044B4740D92} = {76ADFE8E-8B06-4690-B2F3-5870BC601A8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFC6A1D2-796B-40FD-AC58-06DA78D94554}
