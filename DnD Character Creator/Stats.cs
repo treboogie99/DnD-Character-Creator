@@ -34,15 +34,6 @@ namespace DnD_Character_Creator
             return rolls[0] + rolls[1] + rolls[2];
         }
 
-        public void SetStats(int Strength, int Intelligence, int Dexterity, int Constitution, int Wisdom, int Charisma)
-        {
-            this.Strength = Strength;
-            this.Intelligence = Intelligence;
-            this.Dexterity = Dexterity;
-            this.Constitution = Constitution;
-            this.Wisdom = Wisdom;
-            this.Charisma = Charisma;
-        }
 
         public int Strength { get; set; }
         public int Intelligence { get; set; }

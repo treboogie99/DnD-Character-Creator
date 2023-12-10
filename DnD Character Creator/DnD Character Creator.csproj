@@ -49,6 +49,16 @@
     <Compile Include="Bard.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Barbarian.cs" />
+    <Compile Include="Dragonborn.cs" />
+    <Compile Include="Dwarf.cs" />
+    <Compile Include="Elf.cs" />
+    <Compile Include="Gnome.cs" />
+    <Compile Include="HalfElf.cs" />
+    <Compile Include="Halfling.cs" />
+    <Compile Include="HalfOrc.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="Tiefling.cs" />
+    <Compile Include="Races.cs" />
     <Compile Include="Warlock.cs" />
     <Compile Include="Paladin.cs" />
     <Compile Include="Wizard.cs" />
@@ -66,7 +76,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stats.cs" />

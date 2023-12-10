@@ -6,15 +6,37 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnD Character Creator", "DnD Character Creator\DnD Character Creator.csproj", "{F158CDF3-CD04-4CF7-84AB-5381A4BE33C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76ADFE8E-8B06-4690-B2F3-5870BC601A8B}"
-	ProjectSection(SolutionItems) = preProject
-		DnD Character Creator\NewInterface.cs = DnD Character Creator\NewInterface.cs
-		DnD Character Creator\Stats.cs = DnD Character Creator\Stats.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{CACB187B-C26A-491D-9A96-C044B4740D92}"
 	ProjectSection(SolutionItems) = preProject
-		Class1.cs = Class1.cs
-		Sample = Sample
+		DnD Character Creator\Barbarian.cs = DnD Character Creator\Barbarian.cs
+		DnD Character Creator\Bard.cs = DnD Character Creator\Bard.cs
+		DnD Character Creator\Classes.cs = DnD Character Creator\Classes.cs
+		DnD Character Creator\Cleric.cs = DnD Character Creator\Cleric.cs
+		DnD Character Creator\Fighter.cs = DnD Character Creator\Fighter.cs
+		DnD Character Creator\Monk.cs = DnD Character Creator\Monk.cs
+		DnD Character Creator\Paladin.cs = DnD Character Creator\Paladin.cs
+		DnD Character Creator\Ranger.cs = DnD Character Creator\Ranger.cs
+		DnD Character Creator\Rogue.cs = DnD Character Creator\Rogue.cs
+		DnD Character Creator\Sorcerer.cs = DnD Character Creator\Sorcerer.cs
+		DnD Character Creator\Warlock.cs = DnD Character Creator\Warlock.cs
+		DnD Character Creator\Wizard.cs = DnD Character Creator\Wizard.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{ED8AF7E3-C90B-4E93-92BF-C6B9FCEE8C28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Races", "Races", "{DFE02A4B-908F-4D55-BECE-9FEDEF9C8E88}"
+	ProjectSection(SolutionItems) = preProject
+		DnD Character Creator\Dragonborn.cs = DnD Character Creator\Dragonborn.cs
+		DnD Character Creator\Dwarf.cs = DnD Character Creator\Dwarf.cs
+		DnD Character Creator\Elf.cs = DnD Character Creator\Elf.cs
+		DnD Character Creator\Gnome.cs = DnD Character Creator\Gnome.cs
+		DnD Character Creator\HalfElf.cs = DnD Character Creator\HalfElf.cs
+		DnD Character Creator\Halfling.cs = DnD Character Creator\Halfling.cs
+		DnD Character Creator\HalfOrc.cs = DnD Character Creator\HalfOrc.cs
+		DnD Character Creator\Human.cs = DnD Character Creator\Human.cs
+		DnD Character Creator\Races.cs = DnD Character Creator\Races.cs
+		DnD Character Creator\Tiefling.cs = DnD Character Creator\Tiefling.cs
 	EndProjectSection
 EndProject
 Global
@@ -33,6 +55,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CACB187B-C26A-491D-9A96-C044B4740D92} = {76ADFE8E-8B06-4690-B2F3-5870BC601A8B}
+		{DFE02A4B-908F-4D55-BECE-9FEDEF9C8E88} = {76ADFE8E-8B06-4690-B2F3-5870BC601A8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFC6A1D2-796B-40FD-AC58-06DA78D94554}

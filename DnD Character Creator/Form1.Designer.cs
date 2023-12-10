@@ -64,6 +64,10 @@
             this.buttonIntRoll = new System.Windows.Forms.Button();
             this.buttonWisRoll = new System.Windows.Forms.Button();
             this.buttonCharRoll = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +99,7 @@
             this.domainUpDownClass.Items.Add("Monk");
             this.domainUpDownClass.Items.Add("Paladin");
             this.domainUpDownClass.Items.Add("Ranger");
-            this.domainUpDownClass.Items.Add("Rogue ");
+            this.domainUpDownClass.Items.Add("Rogue");
             this.domainUpDownClass.Items.Add("Sorcerer");
             this.domainUpDownClass.Items.Add("Warlock");
             this.domainUpDownClass.Items.Add("Wizard");
@@ -107,11 +111,11 @@
             // 
             // domainUpDownRace
             // 
+            this.domainUpDownRace.Items.Add("Dragonborn");
             this.domainUpDownRace.Items.Add("Dwarf");
             this.domainUpDownRace.Items.Add("Elf");
             this.domainUpDownRace.Items.Add("Halfling");
             this.domainUpDownRace.Items.Add("Human");
-            this.domainUpDownRace.Items.Add("Dragonborn");
             this.domainUpDownRace.Items.Add("Gnome");
             this.domainUpDownRace.Items.Add("Half-Elf");
             this.domainUpDownRace.Items.Add("Half-Orc");
@@ -141,6 +145,7 @@
             this.domainUpDownBackground.Name = "domainUpDownBackground";
             this.domainUpDownBackground.Size = new System.Drawing.Size(129, 20);
             this.domainUpDownBackground.TabIndex = 4;
+            this.domainUpDownBackground.SelectedItemChanged += new System.EventHandler(this.domainUpDownBackground_SelectedItemChanged);
             // 
             // domainUpDownAlignment
             // 
@@ -263,6 +268,7 @@
             this.labelStrength.Size = new System.Drawing.Size(60, 75);
             this.labelStrength.TabIndex = 15;
             this.labelStrength.Text = "0";
+            this.labelStrength.Click += new System.EventHandler(this.labelStrength_Click);
             // 
             // buttonTest
             // 
@@ -296,15 +302,15 @@
             // listBoxFeatures
             // 
             this.listBoxFeatures.FormattingEnabled = true;
-            this.listBoxFeatures.Location = new System.Drawing.Point(460, 286);
+            this.listBoxFeatures.Location = new System.Drawing.Point(490, 265);
             this.listBoxFeatures.Name = "listBoxFeatures";
-            this.listBoxFeatures.Size = new System.Drawing.Size(200, 472);
+            this.listBoxFeatures.Size = new System.Drawing.Size(200, 485);
             this.listBoxFeatures.TabIndex = 17;
             // 
             // listBoxProficiencies
             // 
             this.listBoxProficiencies.FormattingEnabled = true;
-            this.listBoxProficiencies.Location = new System.Drawing.Point(78, 546);
+            this.listBoxProficiencies.Location = new System.Drawing.Point(108, 538);
             this.listBoxProficiencies.Name = "listBoxProficiencies";
             this.listBoxProficiencies.Size = new System.Drawing.Size(182, 212);
             this.listBoxProficiencies.TabIndex = 18;
@@ -313,7 +319,7 @@
             // listBoxEquipment
             // 
             this.listBoxEquipment.FormattingEnabled = true;
-            this.listBoxEquipment.Location = new System.Drawing.Point(266, 545);
+            this.listBoxEquipment.Location = new System.Drawing.Point(296, 537);
             this.listBoxEquipment.Name = "listBoxEquipment";
             this.listBoxEquipment.Size = new System.Drawing.Size(187, 212);
             this.listBoxEquipment.TabIndex = 19;
@@ -321,7 +327,7 @@
             // listBoxSkills
             // 
             this.listBoxSkills.FormattingEnabled = true;
-            this.listBoxSkills.Location = new System.Drawing.Point(266, 288);
+            this.listBoxSkills.Location = new System.Drawing.Point(296, 264);
             this.listBoxSkills.Name = "listBoxSkills";
             this.listBoxSkills.Size = new System.Drawing.Size(188, 251);
             this.listBoxSkills.TabIndex = 20;
@@ -434,11 +440,52 @@
             this.buttonCharRoll.UseVisualStyleBackColor = true;
             this.buttonCharRoll.Click += new System.EventHandler(this.buttonCharRoll_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(105, 522);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Proficiencies";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(299, 522);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Equipment";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(293, 248);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Skills";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(487, 248);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Features";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // CharacterSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 762);
+            this.ClientSize = new System.Drawing.Size(699, 762);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonCharRoll);
             this.Controls.Add(this.buttonWisRoll);
             this.Controls.Add(this.buttonIntRoll);
@@ -518,6 +565,10 @@
         private System.Windows.Forms.Button buttonIntRoll;
         private System.Windows.Forms.Button buttonWisRoll;
         private System.Windows.Forms.Button buttonCharRoll;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 
