@@ -457,6 +457,7 @@
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 34;
             this.label8.Text = "Equipment";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 

@@ -10,7 +10,6 @@ namespace DnD_Character_Creator
     {
         // Initialize Character Object
 
-        public static readonly Character character = new Character();
 
         /// <summary>
         /// The main entry point for the application.

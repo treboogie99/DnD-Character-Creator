@@ -57,6 +57,7 @@
     <Compile Include="Halfling.cs" />
     <Compile Include="HalfOrc.cs" />
     <Compile Include="Human.cs" />
+    <Compile Include="Interface1.cs" />
     <Compile Include="Tiefling.cs" />
     <Compile Include="Races.cs" />
     <Compile Include="Warlock.cs" />

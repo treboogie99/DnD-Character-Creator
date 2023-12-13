@@ -17,9 +17,9 @@ namespace DnD_Character_Creator
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
-
+            Character character = new Character();
         }
 
         private void textBoxCharacterName_TextChanged(object sender, EventArgs e)
@@ -39,17 +39,61 @@ namespace DnD_Character_Creator
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
         {
+            //Declare all classes
+            Bard bard = new Bard();
+            Barbarian barbarian = new Barbarian();
+            Cleric cleric = new Cleric();
+            Druid druid = new Druid();
+            Fighter fighter = new Fighter();
+            Monk monk = new Monk();
+            Paladin paladin = new Paladin();
+            Ranger ranger = new Ranger();
+            Rogue rogue = new Rogue();
+            Sorcerer sorcerer = new Sorcerer();
+            Warlock warlock = new Warlock();
+            Wizard wizard = new Wizard();
+
             //Set Character Class and Adjust Stats and change Features, Proficiency, Equipment, Skills listboxes accordingly
             Character character = new Character();
+            
             character.Class = domainUpDownClass.Text;
-            listBoxFeatures.Items.Clear();
-            listBoxProficiencies.Items.Clear();
-            listBoxEquipment.Items.Clear();
-            listBoxSkills.Items.Clear();
             
             if (character.Class == "Bard")
             {
-                Bard bard = new Bard();
+                // Remove previous class items
+                foreach (string feature in barbarian.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in barbarian.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in barbarian.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in barbarian.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in cleric.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in cleric.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in cleric.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in cleric.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                bard.UpdateStats(character);
                 foreach (string feature in bard.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -69,7 +113,23 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Barbarian")
             {
-                Barbarian barbarian = new Barbarian();
+                foreach (string feature in bard.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in bard.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in bard.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in bard.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                barbarian.UpdateStats(character);
                 foreach (string feature in barbarian.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -89,7 +149,40 @@ namespace DnD_Character_Creator
             }
             else if(character.Class == "Cleric")
             {
-                Cleric cleric = new Cleric();
+                foreach (string feature in bard.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in bard.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                
+                foreach (string equipment in bard.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in bard.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in druid.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in druid.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in druid.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in druid.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                cleric.UpdateStats(character);
                 foreach (string feature in cleric.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -109,7 +202,42 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Druid")
             {
-                Druid druid = new Druid();
+                
+                druid.UpdateStats(character);
+
+                foreach (string feature in cleric.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in cleric.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in cleric.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in cleric.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in fighter.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in fighter.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in fighter.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in fighter.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in druid.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -129,7 +257,39 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Fighter")
             {
-                Fighter fighter = new Fighter();
+                fighter.UpdateStats(character);
+                foreach (string feature in druid.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in druid.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in druid.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in druid.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in monk.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in monk.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in monk.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in monk.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
                 foreach (string feature in fighter.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -149,7 +309,40 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Monk")
             {
-                Monk monk = new Monk();
+                monk.UpdateStats(character);
+                foreach (string feature in fighter.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in fighter.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in fighter.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in fighter.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in paladin.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in paladin.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in paladin.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in paladin.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in monk.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -169,7 +362,40 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Paladin")
             {
-                Paladin paladin = new Paladin();
+                paladin.UpdateStats(character);
+                foreach (string feature in monk.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in monk.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in monk.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in monk.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in ranger.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in ranger.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in ranger.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in ranger.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in paladin.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -189,7 +415,40 @@ namespace DnD_Character_Creator
             }
             else if(character.Class =="Ranger")
             {
-                Ranger ranger = new Ranger();
+                ranger.UpdateStats(character);
+                foreach (string feature in paladin.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in paladin.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in paladin.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in paladin.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in rogue.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in rogue.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in rogue.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in rogue.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in ranger.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -209,7 +468,40 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Rogue")
             {
-                Rogue rogue = new Rogue();
+                rogue.UpdateStats(character);
+                foreach (string feature in ranger.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in ranger.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in ranger.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in ranger.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in sorcerer.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in sorcerer.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in sorcerer.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in sorcerer.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in rogue.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -229,7 +521,41 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Sorcerer")
             {
-                Sorcerer sorcerer = new Sorcerer();
+                sorcerer.UpdateStats(character);
+
+                foreach (string feature in rogue.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in rogue.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in rogue.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in rogue.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in warlock.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in warlock.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in warlock.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in warlock.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in sorcerer.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -249,7 +575,40 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Warlock")
             {
-                Warlock warlock = new Warlock();
+                warlock.UpdateStats(character);
+                foreach (string feature in sorcerer.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in sorcerer.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in sorcerer.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in sorcerer.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in wizard.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in wizard.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in wizard.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in wizard.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in warlock.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
@@ -269,14 +628,31 @@ namespace DnD_Character_Creator
             }
             else if (character.Class == "Wizard")
             {
-                Wizard wizard = new Wizard();
+                wizard.UpdateStats(character);
+                foreach (string feature in warlock.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in warlock.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in warlock.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in warlock.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                
                 foreach (string feature in wizard.Features)
                 {
                     listBoxFeatures.Items.Add(feature);
                 }
                 foreach (string proficiency in wizard.Proficiencies)
                 {
-                    label1.Text = proficiency;
+                    listBoxProficiencies.Items.Add(proficiency);
                 }
                 foreach (string equipment in wizard.Equipment)
                 {
@@ -294,15 +670,41 @@ namespace DnD_Character_Creator
         {
             //Set Character Race and Adjust Stats and change Features, Proficiency, Equipment, Skills listboxes accordingly
             // remove race items
+            Dragonborn dragonborn = new Dragonborn();
+            Dwarf dwarf = new Dwarf();
+            Elf elf = new Elf();
+            Gnome gnome = new Gnome();
+            HalfElf halfelf = new HalfElf();
+            Halfling halfling = new Halfling();
+            HalfOrc halforc = new HalfOrc();
+            Human human = new Human();
+            Tiefling tiefling = new Tiefling();
+
             Character character = new Character();
+
             character.Race = domainUpDownRace.Text;
             if (character.Race == "Dragonborn")
             {
-                Dragonborn dragonborn = new Dragonborn();
                 character.Stats.Strength += dragonborn.Stats.Strength;
+                foreach (string feature in dwarf.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in dwarf.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in dwarf.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in dwarf.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
                 foreach (string feature in dragonborn.Features)
                 {
-                    // if an item is already in the listbox, don't add it again 
+                    // if an item is already in the listbox, don't add it again remove previous class items
                     if (listBoxFeatures.Items.Contains(feature))
                     {
                         continue;
@@ -351,7 +753,39 @@ namespace DnD_Character_Creator
             }
             else if (character.Race == "Dwarf")
             {
-                Dwarf dwarf = new Dwarf();
+                foreach (string feature in dragonborn.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in dragonborn.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in dragonborn.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in dragonborn.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in elf.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }   
+                foreach (string proficiency in elf.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in elf.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in elf.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in dwarf.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -401,7 +835,39 @@ namespace DnD_Character_Creator
             }
             else if (character.Race == "Elf")
             {
-                Elf elf = new Elf();
+                foreach (string feature in dwarf.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in dwarf.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in dwarf.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in dwarf.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in gnome.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in gnome.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in gnome.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in gnome.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in elf.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -451,7 +917,39 @@ namespace DnD_Character_Creator
             }
             else if (character.Race == "Gnome")
             {
-                Gnome gnome = new Gnome();
+                foreach (string feature in elf.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in elf.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in elf.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in elf.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in halfelf.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in halfelf.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in halfelf.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in halfelf.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in gnome.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -501,7 +999,39 @@ namespace DnD_Character_Creator
             }
             else if (character.Race == "Half-Elf")
             {
-                HalfElf halfelf = new HalfElf();
+                foreach (string feature in gnome.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in gnome.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in gnome.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in gnome.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in halforc.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in halforc.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in halforc.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in halforc.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in halfelf.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -552,7 +1082,39 @@ namespace DnD_Character_Creator
             }
             else if (character.Race == "Halfling")
                 {
-                Halfling halfling = new Halfling();
+                foreach (string feature in halfelf.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in halfelf.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in halfelf.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in halfelf.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in halforc.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in halforc.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in halforc.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in halforc.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in halfling.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -603,7 +1165,40 @@ namespace DnD_Character_Creator
             }
             else if (character.Race == "Half-Orc")
             {
-                HalfOrc halforc = new HalfOrc();
+                foreach (string feature in halfling.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in halfling.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in halfling.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                
+                foreach (string skill in halfling.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in human.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in human.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in human.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in human.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in halforc.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -653,7 +1248,39 @@ namespace DnD_Character_Creator
             }
             else if (character.Race == "Human")
             {
-                Human human = new Human();
+                foreach (string feature in halforc.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in halforc.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in halforc.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in halforc.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+                foreach (string feature in tiefling.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in tiefling.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in tiefling.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in tiefling.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
+
                 foreach (string feature in human.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -703,7 +1330,22 @@ namespace DnD_Character_Creator
             }
             else if(character.Race =="Tiefling")
             {
-                Tiefling tiefling = new Tiefling();
+                foreach (string feature in human.Features)
+                {
+                    listBoxFeatures.Items.Remove(feature);
+                }
+                foreach (string proficiency in human.Proficiencies)
+                {
+                    listBoxProficiencies.Items.Remove(proficiency);
+                }
+                foreach (string equipment in human.Equipment)
+                {
+                    listBoxEquipment.Items.Remove(equipment);
+                }
+                foreach (string skill in human.Skills)
+                {
+                    listBoxSkills.Items.Remove(skill);
+                }
                 foreach (string feature in tiefling.Features)
                 {
                     // if an item is already in the listbox, don't add it again
@@ -882,6 +1524,11 @@ namespace DnD_Character_Creator
         }
 
         private void labelStrength_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

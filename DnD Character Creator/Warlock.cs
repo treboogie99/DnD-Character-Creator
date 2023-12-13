@@ -8,11 +8,6 @@ namespace DnD_Character_Creator
 {
     internal class Warlock : Classes
     {
-        public List<string> Features = new List<string>();
-        public List<string> Proficiencies = new List<string>();
-        public List<string> Equipment = new List<string>();
-        public List<string> Skills = new List<string>();
-
         public Warlock()
         {
             //Allowed Options for Warlock
